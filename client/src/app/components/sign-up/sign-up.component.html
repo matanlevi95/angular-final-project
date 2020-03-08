@@ -1,0 +1,27 @@
+<div align="center">
+  <div class="signBorder">
+    <h2>Sign Up</h2>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input [(ngModel)]="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+        placeholder="Enter email">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div>
+      <label for="City"></label>
+      <input style="text-transform: capitalize;" list="cities">
+      <datalist id="cities">
+        <option *ngFor="let city of citiesList" value="{{city}}"></option>
+      </datalist>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input [(ngModel)]="password" type="password" class="form-control" id="exampleInputPassword1"
+        placeholder="Password">
+    </div>
+    <span>{{message}}</span>
+
+    <br>
+    <button type="button" (click)="signUp()" class="btn btn-primary">Sign Up</button>
+  </div>
+</div>
